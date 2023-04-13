@@ -1,0 +1,41 @@
+{
+  "name": "Browse Safe",
+  "description": "cybersecurity Final year Project of FAST university",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "runtime",
+    "tabs",
+    "scripting",
+    "windows",
+    "popup"
+  ],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_title": "Click Me",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/logo.png",
+      "32": "/images/logo.png",
+      "48": "/images/logo.png",
+      "128": "/images/logo.png"
+    }
+  },
+  "icons": {
+    "16": "/images/logo.png",
+    "32": "/images/logo.png",
+    "48": "/images/logo.png",
+    "128": "/images/logo.png"
+  },
+  "type": "module"
+}
